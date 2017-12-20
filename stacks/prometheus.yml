@@ -4,13 +4,13 @@ services:
 
   prometheus:
     build: ../prom
-    image: localhost:5000/prom
+    image: 127.0.0.1:5000/prom
     ports:
       - "9090:9090"
 
   node:
     image: prom/node-exporter
-    command: -collector.procfs /host/proc -collector.sysfs /host/proc -collector.filesystem.ignored-mount-points "^(sys|proc|dev|host|etc)($$|/)"
+    command: --path.procfs /host/proc --path.sysfs /host/proc --collector.filesystem.ignored-mount-points "^(sys|proc|dev|host|etc)($$|/)"
     deploy:
       mode: global
     volumes:
