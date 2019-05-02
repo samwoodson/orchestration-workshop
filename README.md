@@ -43,7 +43,7 @@ because they have a few things in common:
   (and updated) identically between different decks;
 - a [build system](slides/) generating HTML slides from
   Markdown source files;
-- a [semi-automated test harness](slides/autotest.py) to check
+- a [semi-automated test harness](slides/autopilot/) to check
   that the exercises and examples provided work properly;
 - a [PhantomJS script](slides/slidechecker.js) to check
   that the slides look good and don't have formatting issues;
@@ -199,7 +199,7 @@ this section is for you!
   locked-down computer, host firewall, etc.
 - Horrible wifi, or ssh port TCP/22 not open on network! If wifi sucks you
   can try using MOSH https://mosh.org which handles SSH over UDP. TMUX can also
-  prevent you from loosing your place if you get disconnected from servers.
+  prevent you from losing your place if you get disconnected from servers.
   https://tmux.github.io
 - Forget to print "cards" and cut them up for handing out IP's.
 - Forget to have fun and focus on your students!
@@ -247,6 +247,17 @@ content but you also know to skip during presentation.
 - Last 15-30 minutes is for stateful services, DAB files, and questions.
 
 
+### Pre-built images
+
+There are pre-built images for the 4 components of the DockerCoins demo app: `dockercoins/hasher:v0.1`, `dockercoins/rng:v0.1`, `dockercoins/webui:v0.1`, and `dockercoins/worker:v0.1`. They correspond to the code in this repository.
+
+There are also three variants, for demo purposes:
+
+- `dockercoins/rng:v0.2` is broken (the server won't even start),
+- `dockercoins/webui:v0.2` has bigger font on the Y axis and a green graph (instead of blue),
+- `dockercoins/worker:v0.2` is 11x slower than `v0.1`.
+
+
 ## Past events
 
 Since its inception, this workshop has been delivered dozens of times,
@@ -281,15 +292,31 @@ If there is a bug and you can't even reproduce it:
 sorry. It is probably an Heisenbug. We can't act on it
 until it's reproducible, alas.
 
-If you have attended this workshop and have feedback,
-or if you want somebody  to deliver that workshop at your
-conference or for your company: you can contact one of us!
 
-- jerome at docker dot com
+# “Please teach us!”
+
+If you have attended one of these workshops, and want
+your team or organization to attend a similar one, you
+can look at the list of upcoming events on
+http://container.training/.
+
+You are also welcome to reuse these materials to run
+your own workshop, for your team or even at a meetup
+or conference. In that case, you might enjoy watching
+[Bridget Kromhout's talk at KubeCon 2018 Europe](
+https://www.youtube.com/watch?v=mYsp_cGY2O0), explaining
+precisely how to run such a workshop yourself.
+
+Finally, you can also contact the following persons,
+who are experienced speakers, are familiar with the
+material, and are available to deliver these workshops
+at your conference or for your company:
+
+- jerome dot petazzoni at gmail dot com
 - bret at bretfisher dot com
 
-If you are willing and able to deliver such workshops,
-feel free to submit a PR to add your name to that list!
+(If you are willing and able to deliver such workshops,
+feel free to submit a PR to add your name to that list!)
 
 **Thank you!**
 

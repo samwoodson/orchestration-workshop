@@ -284,6 +284,8 @@ Once again, we will send 50 requests, with different levels of concurrency.
     ab -c 50 -n 50 -T application/octet-stream -p /tmp/random http://hasher/
   ```
 
+<!-- ```bash exit``` -->
+
 ]
 
 ---
@@ -300,7 +302,7 @@ class: extra-details, benchmarking
 
 - Requests are a bit slower in the parallel benchmark
 
-- It looks like `hasher` is better equiped to deal with concurrency than `rng`
+- It looks like `hasher` is better equipped to deal with concurrency than `rng`
 
 ---
 
@@ -382,6 +384,6 @@ class: extra-details
 
 ## More about overlay networks
 
-.blackbelt[[Deep Dive in Docker Overlay Networks](https://www.youtube.com/watch?v=b3XDl0YsVsg&index=1&list=PLkA60AVN3hh-biQ6SCtBJ-WVTyBmmYho8) by Laurent Bernaille (DC17US)]
+.blackbelt[DC17US: Deep Dive in Docker Overlay Networks ([video](https://www.youtube.com/watch?v=b3XDl0YsVsg&index=1&list=PLkA60AVN3hh-biQ6SCtBJ-WVTyBmmYho8))]
 
-.blackbelt[Deeper Dive in Docker Overlay Networks by Laurent Bernaille (Wednesday 13:30)]
+.blackbelt[DC17EU: Deeper Dive in Docker Overlay Networks ([video](https://dockercon.docker.com/watch/XkRRA7Etsznv7uAk1UKsri))]

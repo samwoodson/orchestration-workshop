@@ -454,7 +454,7 @@ class: snap
 
 .exercise[
 
-- Run the following command *on every node:*
+- Run the following command *on every node*:
   ```bash
   snapd -t 0 -l 1 --tribe --tribe-seed node1:6000
   ```
@@ -554,7 +554,7 @@ class: snap
 
 ## Instruct all nodes to join the agreement
 
-- We dont need another fancy global service!
+- We don't need another fancy global service!
 
 - We can join nodes from any existing node of the cluster
 
@@ -636,7 +636,7 @@ class: snap
 ]
 
 Note: this will allow any node to publish metrics data to `localhost:8086`,
-and it will allows us to access the admin interface by connecting to any node
+and it will allow us to access the admin interface by connecting to any node
 on port 8083.
 
 .warning[Make sure to use InfluxDB 0.13; a few things changed in 1.0
@@ -949,7 +949,7 @@ class: prom
 
 ## It's all about the `/metrics`
 
-- This is was the *node exporter* looks like:
+- This is what the *node exporter* looks like:
 
   http://demo.robustperception.io:9100/metrics
 
@@ -1183,7 +1183,7 @@ class: prom
 
 ]
 
-You should see 11 endpoints (5 cadvisor, 5 node, 1 prometheus).
+You should see 7 endpoints (3 cadvisor, 3 node, 1 prometheus).
 
 Their state should be "UP".
 

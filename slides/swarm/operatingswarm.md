@@ -10,7 +10,7 @@ Otherwise: check [part 1](#part-1) to learn how to set up your own cluster.
 
 We pick up exactly where we left you, so we assume that you have:
 
-- a five nodes Swarm cluster,
+- a Swarm cluster with at least 3 nodes,
 
 - a self-hosted registry,
 
@@ -25,7 +25,7 @@ class: self-paced
 ## Catching up
 
 Assuming you have 5 nodes provided by
-[Play-With-Docker](http://www.play-with-docker/), do this from `node1`:
+[Play-With-Docker](https://www.play-with-docker/), do this from `node1`:
 
 ```bash
 docker swarm init --advertise-addr eth0
@@ -33,7 +33,7 @@ TOKEN=$(docker swarm join-token -q manager)
 for N in $(seq 2 5); do
   DOCKER_HOST=tcp://node$N:2375 docker swarm join --token $TOKEN node1:2377
 done
-git clone git://github.com/jpetazzo/container.training
+git clone https://@@GITREPO@@
 cd container.training/stacks
 docker stack deploy --compose-file registry.yml registry
 docker-compose -f dockercoins.yml build
